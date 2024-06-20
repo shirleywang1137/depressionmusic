@@ -58,14 +58,14 @@ Figures 4 and 5 are linear model representations that demonstrate the relationsh
 
 ### Figure 6: Regression Data for Sadness Level and Depression Level Variables
 
-|       Model |Estimate| P_Value| T_Value|R_Squared|
+|       Model Estimate P_Value T_Value R_Squared|
 |:----|
 |    Sadness  | -0.001 |  0.925 | -0.096 |  0.00061|
 | Depression  |  0.001 |  0.908 |  0.118 |  0.00092|
 
 ### Figure 7: Correlation Table for Variables’ Relationships
 
-|                   Variables | Correlation|
+|                   Variables  Correlation|
 |:----|
 |    Sadness & Mental Health  |   -0.025   |
 | Depression & Mental Health  |    0.030   |
@@ -77,7 +77,7 @@ Only about 0.06% of the variability in mental health ratings is explained by sad
 
 ### Figure 8: Correlation Comparison between Sadness Levels of Songs and Mental Health vs. Depression Levels of Songs and Mental Health
 
-|  Z_Score |P_Value|
+|  Z_Score P_Value|
 |:----|
 |  -0.306  |  0.76|
 
