@@ -1,5 +1,3 @@
-Lab #10 Markdown File
-
 Can Music Tell If You’re Unwell? Exploring the Relationship Between Popular Music Sentiments and Societal Mental Wellbeing
 Introduction
 The intersection of music and mental health has long been a fascination to researchers and the public. The impact of music on people can be significant, as it is a profound reflection of the collective emotional and cultural currents of its time. It can have the power to convey complex emotions and dispositions and perhaps provide a therapeutic outlet.
