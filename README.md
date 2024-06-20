@@ -37,39 +37,51 @@ Due to the fact that the Gallup data was based on an annual survey, the average 
 Statistical methods were employed to analyze the correlation between the average yearly sentiment scores of popular songs and the depression rates in society. 2 linear regression models were created, one for analyzing the relationship between sadness sentiment of the songs and reported mental health levels and the other for analyzing the relationship between depression sentiment of the songs and reported mental health levels. Additionally, a William’s test was conducted to compare the two correlations. The William’s test was chosen over the Steiger’s test to test correlation differences because the two correlations I intend to compare have one overlapping variable (mental health scores), which is thus more appropriately suited for William’s over Steiger’s (Graham & Baldwin, 2014).
 
 ## Results
+### Figure 1: Average Sadness Scores of Top 5% Most Popular Songs
+![Figure1](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/7e190a50-72d3-43a2-8538-ed6338f56376)
 
-![Figure1](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/d6d8d6ea-e32e-495d-9a16-41114af1146c)
-![Figure2](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/66b2c7a5-995d-4ea5-8c1e-f319bc6081c4)
+### Figure 2: Average Depression Scores of Top 5% Most Popular Songs
+![Figure2](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/65ac4cda-dabd-4c0b-8e7f-46deb395001e)
+
+### Figure 3: Comparison of Depression, Sadness, and Mental Health Scores
+![Figure3](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/713853a8-a6f0-4c99-9a85-8845191d6ec3)
  
 From Figure 1 and 2, we can see the general trend of the resulting averaged sadness and depression levels, respectively, based on year. Both levels have decreased over time; however, the slope for depression is a little steeper than the line for sadness, meaning the depression levels for songs have decreased at a faster rate than for sadness level. Since the depression and sadness scores range from 1 to 10 and the mental health scores range from 1 to 4, Figure 3 shows a standardized version of all the scores so that they range from 0 to 1 for easier comparison. Based on the hypothesis, whenever we see positive slopes for sadness and depression, we should see a negative slope for mental health for that same time period (as sadness and depression increases, mental health decreases). We should also be able to see the reverse. It can sort of be seen in 2004-2006, but then there is a roughly overall downward slope for all factors in 2007-2009 and then upward slope for all 3 from 2009-2011. More analysis is necessary as it is unclear if the hypothesis is correct or not due to the inability to extract a consistent pattern from Figure 3.
 
-![Figure3](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/50f0a5ce-5fb8-4cc9-97f5-4ca5c2ffe3f4)
-![Figure4](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/062fd82b-f1b0-4a95-a0f6-1f761bfe934d)
-![Figure5](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/8b6a78f5-5cfa-4468-b4e8-dc5b2e918881)
+### Figure 4: Regression Visualization - Sadness Levels of Songs and Mental Health
+![Figure4](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/01b5bb04-7684-4e7f-ae6c-8ccfe1a17fbd)
 
+### Figure 5: Regression Visualization - Depression Levels of Songs and Mental Health
+![Figure5](https://github.com/shirleywang1137/feelingsofmusic/assets/90203324/10390e5c-4c2c-4cbd-80ee-50a32f45f1e9)
 
-Figures 3 and 4 are linear model representations that demonstrate the relationships between mental health and sadness scores of top songs and mental health and depression scores of top songs, respectively. From first glance, it seems as though no strong correlation exists between mental health levels and either of the independent variables as the dots are still quite scattered and not very close to the predicted line. Further breakdown of the regression model must be conducted.
+Figures 4 and 5 are linear model representations that demonstrate the relationships between mental health and sadness scores of top songs and mental health and depression scores of top songs, respectively. From first glance, it seems as though no strong correlation exists between mental health levels and either of the independent variables as the dots are still quite scattered and not very close to the predicted line. Further breakdown of the regression model must be conducted.
 
-Figure 5: Regression Data for Sadness Level and Depression Level Variables
+### Figure 6: Regression Data for Sadness Level and Depression Level Variables
 
-       Model Estimate P_Value T_Value R_Squared
-1    Sadness   -0.001   0.925  -0.096   0.00061
-2 Depression    0.001   0.908   0.118   0.00092
-Figure 6: Correlation Table for Variables’ Relationships
+|       Model Estimate P_Value T_Value R_Squared|
+|:----|
+|    Sadness   -0.001   0.925  -0.096   0.00061|
+| Depression    0.001   0.908   0.118   0.00092|
 
-                   Variables Correlation
-1    Sadness & Mental Health      -0.025
-2 Depression & Mental Health       0.030
-3       Sadness & Depression       0.723
+### Figure 7: Correlation Table for Variables’ Relationships
+
+|                   Variables Correlation|
+|:----|
+|    Sadness & Mental Health      -0.025|
+| Depression & Mental Health       0.030|
+|       Sadness & Depression       0.723|
+
 The correlation coefficient for sadness sentiment of top songs and overall mental health is approximately -0.025, suggesting that there is an inverse relationship where top songs’ sadness levels increase while overall health scores decrease (and vice versa), which is in line with the hypothesis’s prediction. However, the correlation coefficient is close to 0, meaning the strength of the correlation between the sadness levels of songs and mental health scores is very weak. The p-value is 0.925, meaning the relationship between the 2 are not statistically significant since the p-value is greater than 0.05. The data shows there is no statistically significant relationship between most popular songs’ sadness scores and mental health levels; hypothesis 1 cannot be proven true.
 The correlation coefficient for depression sentiment of top songs and overall mental health is approximately 0.03, indicating that as songs’ depression levels increase, overall mental health scores also increase (proportional relationship). This is not in the same direction of Hypothesis 2. This correlation coefficient is also is very close to 0, meaning the correlation strength between the two variables is extremely weak. Additionally, the p-value for is 0.908, implying that the relationship between the 2 are not statistically significant. Thus, there is no statistically significant relationship between most popular songs’ depression scores and mental health levels; hypothesis 2 cannot be proven true.
 Only about 0.06% of the variability in mental health ratings is explained by sadness score changes and about 0.09% of mental health variability can be explained by depression score changes, meaning the two models are quite weak and not suitable for predicting mental health. The very low R-squared values of both models show that sadness and depression scores of popular songs are not good predictors for mental health levels; instead, there are other factors out there that better influence mental health levels and predict its variability.
 
-Figure 7: Correlation Comparison between Sadness Levels of Songs and Mental Health vs. Depression Levels of Songs and Mental Health
+### Figure 8: Correlation Comparison between Sadness Levels of Songs and Mental Health vs. Depression Levels of Songs and Mental Health
 
-  Z_Score P_Value
-1  -0.306    0.76
-Both coefficients (for sadness levels and depression levels) are small and not statistically significant. The coefficient for sadness is slightly larger, but neither is significant. The results of the Williams test are provided in Figure 7. The p-value of 0.76 is higher than 0.05, meaning that these correlations are not significantly different from each other.
+|  Z_Score P_Value|
+|:----|
+|  -0.306    0.76|
+
+Both coefficients (for sadness levels and depression levels) are small and not statistically significant. The coefficient for sadness is slightly larger, but neither is significant. The results of the Williams test are provided in Figure 8. The p-value of 0.76 is higher than 0.05, meaning that these correlations are not significantly different from each other.
 Both individual correlations are not statistically significant and are not significantly different from each other. Given that, Hypothesis 3 is proven as there does not exist a statistical difference between sadness level’s and depression level’s correlation with mental health scores. This significant difference, along with both individual correlations with mental health being statistically non-significant, indicates that the nature of their relationships with mental health is similar.
 
 ## LIMITATIONS
